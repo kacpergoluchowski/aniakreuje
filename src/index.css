@@ -7,7 +7,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 code {
@@ -35,6 +34,10 @@ code {
 }
 
 @media only screen and (min-width: 1504px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .home-hero {
     background-image: url('./images/heroBg.png');
     height: 100vh;
@@ -365,7 +368,7 @@ code {
     align-items: center;
     justify-content: center;
     background: var(--white);
-    padding: 3vh 5vw 0 5vw;
+    padding: 3vh 8vw 0 8vw;
   }
 
   .about--my-profile {
@@ -404,7 +407,7 @@ code {
 
   .about--my-profile > div > div img {
     width: 75px;
-    gap: 100px;
+
   }
 
   .portfolio-section {
@@ -509,4 +512,66 @@ code {
     box-sizing: border-box;
     margin: 0 0 2vh 0;
   }
+
+  .offer {
+    color: white;
+  }
+
+  .offer > div img {
+    width: 600px;
+  }
+
+  .offer > div {
+    display: flex;
+    padding: 0 5vw;
+  }
+
+  .offer h1 {
+    font-family: Kodchasan;
+    font-size: 350%;
+    margin: 3vh 0 0 0;
+  }
+  
+  .offer p {
+     font-size: 250%;
+     font-family: Kalam;
+     line-height: 6vh;
+  }
+
+  .offer button {
+    font-size: 200%;
+  }
+
+  footer {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vh;
+    margin-top: -0.5vh;
+  }
+  
+  footer table {
+    width: 60%;
+    font-size: 300%;
+    font-family: Kaushan Script;
+   
+  }
+  
+  footer table td {
+    font-family: Kalam;
+    text-align: center;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .link img {
+    width: 10%;
+  }
+  
 }
