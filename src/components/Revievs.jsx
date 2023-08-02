@@ -37,7 +37,7 @@ function Reviev(props) {
         Aos.init();
     }, []);
     return (
-        <div className="reviev" data-aos = 'fade-right' data-aos-duration = "2000">
+        <div className="reviev" data-aos = 'fade-right'>
             <img src = {quote}/>
             <p> {props.content} </p>
             <div>
