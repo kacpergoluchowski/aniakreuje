@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam&family=Kaushan+Script&family=Kodchasan:ital,wght@1,400;1,500&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+#root {
+  background: var(--bg-color);
+}
+
+[data-mode='light'] {
+  --bg-color: linear-gradient(to right, #FF9A9E, #F6B5A2);
+  --gradient: linear-gradient(to right, #F9B0A2, #D2DEF2);  
+  --white: white;                                                                                       
+}
+
+[data-mode='dark'] {
+  --bg-color: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  --gradient: linear-gradient(to right, #F9B0A2, #D2DEF2);  
+  --white: white;   
+}
+
+@media only screen and (min-width: 1504px) {
+  .home-hero {
+    background-image: url('./images/heroBg.png');
+    height: 100vh;
+    background-position: center;
+  }
+  
+  .logo {
+    display: flex;
+    font-size: 155%;
+    gap: 15px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .logo > img {
+    width: 60px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    font-family: Indie Flower;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 15px;
+    width: 100vw;
+    background-color: rgba(255,255,255, 0.6);
+    padding: 0 2vw;
+    z-index: 5;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    font-family: Kaushan Script;
+    align-items: center;
+    gap: 70px;
+    margin-right: 3vw;
+  } 
+  
+  .navbar-menu h2 {
+    cursor: pointer;
+  }
+  
+  .navbar-menu img {
+    width: 15%;
+  }
+  
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 155%;
+    padding: 5vh 0 0 0;
+    background-color: var(--white);
+  }
+  
+  .about-section img {
+    width: 25%;
+  }
+  
+  .about-section span {
+    background: var(--bg-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Kaushan Script;
+    font-size: 120%;
+  }
+  
+  .about--my-profile {
+    width: 65%;
+    margin-top: 5vh;
+    display: flex;
+  }
+  
+  .about--my-profile img {
+    width: 600px;
+  }
+  
+  .about--my-profile > div {
+    padding: 6vh 0;
+    box-sizing: border-box;
+    line-height: 5vh;
+  }
+  
+  .about--my-profile p {
+    font-family: Kalam;
+  }
+  
+  .about--my-profile h1 {
+    font-family: Kodchasan;
+  }
+  
+  .about--my-profile > div > div {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .about--my-profile > div > div img {
+    width: 75px;
+    cursor: pointer;
+  }
+  
+  .portfolio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+  }
+  
+  .portfolio-section img {
+    width: 650px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .portfolio-section > div {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    gap: 100px;
+  }
+  
+  .portfolio-section > div > div {
+    font-size: 200%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .portfolio-section p {
+    width: 100%;
+    font-size: 130%;
+    font-family: Kalam;
+    line-height: 7vh;
+  }
+  
+  .portfolio-section h1 {
+    margin: 0;
+    margin-top: 4vh;
+    box-sizing: border-box;
+    font-family: Kodchasan;
+  }
+  
+  button {
+    width: 15vw;
+    height: 8vh;
+    font-size: 125%;
+    background-color: var(--white);
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    font-family: kalam;
+    cursor: pointer;
+  }
+  
+  .reviev {
+    background: var(--bg-color);
+    width: 700px;
+    height: 300px;
+    border-radius: 30px;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    font-size: 140%;
+    font-family: Kalam;
+    color: var(--white)
+  }
+  
+  .reviev > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Kaushan Script;
+    color: var(--white);
+  }
+  
+  .revievs {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    box-sizing: border-box;
+  }
+  
+  .revievs > h1 {
+    margin: 0;
+    margin-left: 13vw;
+    font-size: 300%;
+    font-family: Kodchasan;
+    margin-bottom: 5vh;
+  }
+  
+  .revievs > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 60px;
+  }
+  
+  .reviev p {
+    font-size: 175%;
+    box-sizing: border-box;
+    margin: 0 0 2vh 0;
+  }
+  
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);   
+  }
+  
+  .offer > div {
+    display: flex;
+    width: 80%;
+  }
+  
+  .offer h1 {
+    font-family: Kodchasan;
+    font-size: 350%;
+    margin: 3vh 0 0 0;
+  }
+  
+  .offer p {
+     font-size: 250%;
+     font-family: Kalam;
+     line-height: 6vh;
+  }
+  
+  .offer button {
+    font-size: 250%;
+  }
+  
+  path {
+    fill: var(--white);
+  }
+  
+  footer {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vh;
+  }
+  
+  footer table {
+    width: 60%;
+    font-size: 300%;
+    font-family: Kaushan Script;
+   
+  }
+  
+  footer table td {
+    font-family: Kalam;
+    text-align: center;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .link img {
+    width: 10%;
+  }
+  
+}
+
+
