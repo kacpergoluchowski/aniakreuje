@@ -20,7 +20,7 @@ export default function MyProfile() {
                 <div>
                     <Link to = {"https://www.facebook.com/aneczkagoluchowska"}> <img src = {fb}/> </Link>
                     <Link to = {"https://instagram.com/ania.goluchowska?igshid=MzRlODBiNWFlZA=="}> <img src = {ig}/> </Link>
-                    <img src = {tt}/>
+                    <Link to = {"https://www.facebook.com/aneczkagoluchowska"}> <img src = {tt}/> </Link>
                 </div>
             </div>
         </div>
