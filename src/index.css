@@ -307,4 +307,110 @@ code {
   
 }
 
+@media only screen and (max-width: 1503px) and (min-width: 1100px) {
+  .home-hero {
+    background-image: url('./images/heroBg.png');
+    height: 100vh;
+    background-position: center;
+  }
 
+  .logo {
+    display: flex;
+    font-size: 155%;
+    gap: 15px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .logo > img {
+    width: 60px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    font-family: Indie Flower;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 15px;
+    width: 100vw;
+    background-color: rgba(255,255,255, 0.6);
+    padding: 0 2vw;
+    z-index: 5;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    font-family: Kaushan Script;
+    align-items: center;
+    gap: 70px;
+    margin-right: 3vw;
+  } 
+  
+  .navbar-menu h2 {
+    cursor: pointer;
+  }
+  
+  .navbar-menu img {
+    width: 15%;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 155%;
+    padding: 5vh 0 0 0;
+    background-color: var(--white);
+  }
+  
+  .about-section img {
+    width: 25%;
+  }
+  
+  .about-section span {
+    background: var(--bg-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Kaushan Script;
+    font-size: 120%;
+  }
+  
+  .about--my-profile {
+    width: 35%;
+    margin-top: 5vh;
+    display: flex;
+  }
+  
+  .about--my-profile img {
+    width: 600px;
+  }
+  
+  .about--my-profile > div {
+    padding: 6vh 0;
+    box-sizing: border-box;
+    line-height: 5vh;
+  }
+  
+  .about--my-profile p {
+    font-family: Kalam;
+  }
+  
+  .about--my-profile h1 {
+    font-family: Kodchasan;
+  }
+  
+  .about--my-profile > div > div {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .about--my-profile > div > div img {
+    width: 75px;
+    cursor: pointer;
+  }
+}
