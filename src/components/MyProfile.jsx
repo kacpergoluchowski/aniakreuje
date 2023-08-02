@@ -15,7 +15,7 @@ export default function MyProfile() {
                 <h1> Kim jestem? </h1>
                 <p> Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
                     Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
-                    Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+                    Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
                 </p>
                 <div>
                     <Link to = {"https://www.facebook.com/aneczkagoluchowska"}> <img src = {fb}/> </Link>

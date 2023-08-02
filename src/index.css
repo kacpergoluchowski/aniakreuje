@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -574,4 +575,263 @@ code {
     width: 10%;
   }
   
+}
+
+@media only screen and (max-width: 768px) {
+  #root {
+    width: 100%;
+  }
+
+  .home-hero {
+    background-image: url('./images/heroBg.png');
+    height: 35vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .logo {
+    display: flex;
+    font-size: 120%;
+    gap: 15px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .logo > img {
+    width: 40px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    font-family: Indie Flower;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 15px;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgba(255,255,255, 0.6);
+    padding: 0 2vw;
+    z-index: 5;
+  }
+  
+  .navbar-menu {
+    display: none;
+  } 
+  
+  .navbar-menu h2 {
+    cursor: pointer;
+  }
+  
+  .navbar-menu img {
+    width: 15%;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 155%;
+    background-color: var(--white);
+  }
+  
+  .about-section img {
+    width: 100%;
+    margin-top: 2vh;
+  }
+  
+  .about-section span {
+    background: var(--bg-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Kaushan Script;
+    font-size: 110%;
+  }
+
+  .about--my-profile > div h1 {
+    font-size: 100%;
+    margin: 0;
+    font-family: Kodchasan;
+  }
+
+  .about--my-profile > div {
+    margin-top: -5vh;
+    padding: 0 0 0 15vw;
+    font-family: Kalam;
+  }
+
+  .about--my-profile > div > div {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .about--my-profile > div > div img {
+    width: 60px;
+  }
+
+  .portfolio-section div > img {
+    width: 100%;
+  } 
+
+  .portfolio-section h1 {
+    color: white;
+    font-family: Kodchasan;
+  }
+
+  .portfolio-section > div > div {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  .portfolio-section p {
+    width: 100%;
+    font-size: 130%;
+    font-family: Kalam;
+  }
+
+  button {
+    width: 40vw;
+    height: 5vh;
+    font-size: 150%;
+    font-weight: bold;
+    background-color: var(--white);
+    border: none;
+    border-radius: 30px;
+  }
+
+  .reviev {
+    background: var(--bg-color);
+    width: 90%;
+    height: 300px;
+    border-radius: 30px;
+    padding: 2vh 4vw;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: Kalam;
+    color: var(--white)
+  }
+  
+  .reviev > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Kaushan Script;
+    color: var(--white);
+  }
+  
+  .revievs {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    box-sizing: border-box;
+    margin-top: -1vh;
+    align-items: center;
+  }
+  
+  .revievs > h1 {
+    margin: 0;
+    font-size: 200%;
+    font-family: Kodchasan;
+    margin-bottom: 5vh;
+  }
+  
+  .revievs > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 60px;
+  }
+  
+  .reviev p {
+    font-size: 175%;
+    box-sizing: border-box;
+    margin: 0 0 2vh 0;
+  }
+
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);   
+    margin-top: -0.1vh;
+  }
+  
+  .offer > div {
+    width: 85%;
+  }
+
+  .offer img {
+    width: 100%;
+  }
+  
+  .offer h1 {
+    font-family: Kodchasan;
+    font-size: 250%;
+    margin: 0;
+  }
+  
+  .offer p {
+     font-size: 150%;
+     font-family: Kalam;
+     line-height: 6vh;
+  }
+  
+  .offer button {
+    font-size: 150%;
+  }
+
+  .offer svg {
+    margin-bottom: -0.1vh;
+  }
+  
+  path {
+    fill: var(--white);
+  }
+  
+  footer {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vh;
+  }
+  
+  footer table {
+    width: 90%;
+    font-size: 120%;
+    font-family: Kaushan Script;
+    text-align: center;
+   
+  }
+  
+  footer table td {
+    font-family: Kalam;
+    text-align: center;
+    font-size: 90%;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .link img {
+    width: 10%;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
 }
