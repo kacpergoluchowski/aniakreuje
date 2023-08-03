@@ -17,7 +17,7 @@ code {
 .btn {
   color: black !important;
   text-decoration: none;
-  font-size: 80%;
+  font-size: 130%;
 }
 
 * {
@@ -707,7 +707,7 @@ h1 {
   } 
 
   .portfolio-section h1 {
-    color: white;
+    margin: 0;
   }
 
   .portfolio-section > div > div {
@@ -796,10 +796,6 @@ h1 {
   .offer h1 {
     margin: 0;
   }
-  
-  .offer button {
-    font-size: 150%;
-  }
 
   .offer svg {
     margin-bottom: -0.1vh;
@@ -815,6 +811,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding-bottom: 2vh;
+    margin-top: -0.15vh;
   }
   
   footer table {
