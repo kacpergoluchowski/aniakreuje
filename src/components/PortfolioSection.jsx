@@ -16,7 +16,7 @@ export default function PortfolioSection() {
                 <div data-aos = 'fade-right' data-aos-duration='2000'>
                     <h1> Odkryj moje dzieła </h1>
                     <p> Przeniknij do mojego świata artystycznego, gdzie kolory i wyobraźnia splatają się w wyjątkowych dziełach! </p>
-                    <Link to = 'portfolio'> <button> Moje dzieła  </button> </Link>
+                    <Link to = 'portfolio'> <button className="btn"> Moje dzieła  </button> </Link>
                 </div>
                 <img src = {image} data-aos = 'fade-left' data-aos-duration='2000'/>
             </div>
