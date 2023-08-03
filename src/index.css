@@ -722,8 +722,8 @@ h1 {
 
   .reviev {
     background: var(--bg-color);
-    width: 90%;
-    height: 300px;
+    width: 80%;
+    height: 280px;
     border-radius: 30px;
     padding: 2vh 4vw;
     box-sizing: border-box;
@@ -737,6 +737,10 @@ h1 {
     font-family: Kaushan Script;
     color: var(--white);
   }
+
+  .reviev > div img {
+    width: 30%;
+  }
   
   .revievs {
     display: flex;
@@ -748,7 +752,7 @@ h1 {
   }
 
   .reviev p {
-    font-size: 200%;
+    font-size: 150%;
     margin: 2vh 0;
   }
   
@@ -810,9 +814,14 @@ h1 {
   }
   
   footer table td {
-    font-family: Kalam;
+    font-family: Karla;
     text-align: center;
-    font-size: 90%;
+    font-size: 110%;
+    height: 30px;
+  }
+
+  td {
+    width: 190px;
   }
   
   .link {
@@ -823,6 +832,6 @@ h1 {
   }
   
   .link img {
-    width: 10%;
+    width: 13%;
   }
 }
