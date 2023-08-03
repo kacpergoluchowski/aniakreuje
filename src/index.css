@@ -2,12 +2,12 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 code {
@@ -18,8 +18,21 @@ code {
   scroll-behavior: smooth;
 }
 
+h2 {
+  font-family: Indie Flower;
+}
+
+p {
+  font-family: Kalam;
+}
+
+h1 {
+  font-family: Kodchasan;
+}
+
 #root {
   background: var(--bg-color);
+  overflow-x: hidden;
 }
 
 [data-mode='light'] {
@@ -309,7 +322,6 @@ code {
   .link img {
     width: 10%;
   }
-  
 }
 
 @media only screen and (max-width: 1503px) and (min-width: 1100px) {
@@ -333,7 +345,6 @@ code {
   
   .logo h2 {
     margin: 0;
-    font-family: Indie Flower;
   }
   
   .navbar {
@@ -391,13 +402,11 @@ code {
   }
   
   .about--my-profile p {
-    font-family: Kalam;
     font-size: 135%;
     width: 95%;
   }
   
   .about--my-profile h1 {
-    font-family: Kodchasan;
     font-size: 250%;
   }
 
@@ -444,7 +453,6 @@ code {
   .portfolio-section p {
     width: 100%;
     font-size: 110%;
-    font-family: Kalam;
     line-height: 7vh;
   }
   
@@ -452,7 +460,6 @@ code {
     margin: 0;
     margin-top: 4vh;
     box-sizing: border-box;
-    font-family: Kodchasan;
     font-size: 140%;
   }
 
@@ -482,7 +489,6 @@ code {
     display: flex;
     align-items: center;
     gap: 20px;
-    font-family: Kaushan Script;
     color: var(--white);
   }
   
@@ -497,7 +503,6 @@ code {
     margin: 0;
     margin-left: 13vw;
     font-size: 300%;
-    font-family: Kodchasan;
     margin-bottom: 5vh;
   }
   
@@ -528,14 +533,12 @@ code {
   }
 
   .offer h1 {
-    font-family: Kodchasan;
     font-size: 350%;
     margin: 3vh 0 0 0;
   }
   
   .offer p {
      font-size: 250%;
-     font-family: Kalam;
      line-height: 6vh;
   }
 
@@ -582,6 +585,14 @@ code {
     width: 100%;
   }
 
+  h1 {
+    font-size: 220%;
+  }
+
+  p {
+    font-size: 150%;
+  }
+
   .home-hero {
     background-image: url('./images/heroBg.png');
     height: 35vh;
@@ -604,7 +615,6 @@ code {
   
   .logo h2 {
     margin: 0;
-    font-family: Indie Flower;
   }
   
   .navbar {
@@ -636,13 +646,22 @@ code {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 155%;
     background-color: var(--white);
+    padding-top: 3vh;
   }
   
   .about-section img {
     width: 100%;
     margin-top: 2vh;
+  }
+
+  .about-section .logo img {
+    width: 65px;
+    margin: auto 0;
+  }
+
+  .about-section .logo {
+    display: flex;
   }
   
   .about-section span {
@@ -654,19 +673,17 @@ code {
   }
 
   .about--my-profile > div h1 {
-    font-size: 100%;
     margin: 0;
-    font-family: Kodchasan;
   }
 
   .about--my-profile > div {
     margin-top: -5vh;
-    padding: 0 0 0 15vw;
-    font-family: Kalam;
+    padding: 0 12vw;
+    text-align: justify;
   }
 
   .about--my-profile > div > div {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
   }
@@ -675,13 +692,16 @@ code {
     width: 60px;
   }
 
+  .portfolio-section {
+    margin-top: -0.2vh;
+  }
+
   .portfolio-section div > img {
     width: 100%;
   } 
 
   .portfolio-section h1 {
     color: white;
-    font-family: Kodchasan;
   }
 
   .portfolio-section > div > div {
@@ -695,8 +715,6 @@ code {
   
   .portfolio-section p {
     width: 100%;
-    font-size: 130%;
-    font-family: Kalam;
   }
 
   button {
@@ -716,8 +734,6 @@ code {
     border-radius: 30px;
     padding: 2vh 4vw;
     box-sizing: border-box;
-    font-size: 100%;
-    font-family: Kalam;
     color: var(--white)
   }
   
@@ -740,8 +756,6 @@ code {
   
   .revievs > h1 {
     margin: 0;
-    font-size: 200%;
-    font-family: Kodchasan;
     margin-bottom: 5vh;
   }
   
@@ -753,7 +767,6 @@ code {
   }
   
   .reviev p {
-    font-size: 175%;
     box-sizing: border-box;
     margin: 0 0 2vh 0;
   }
@@ -775,15 +788,7 @@ code {
   }
   
   .offer h1 {
-    font-family: Kodchasan;
-    font-size: 250%;
     margin: 0;
-  }
-  
-  .offer p {
-     font-size: 150%;
-     font-family: Kalam;
-     line-height: 6vh;
   }
   
   .offer button {
@@ -829,9 +834,5 @@ code {
   
   .link img {
     width: 10%;
-  }
-  
-  body {
-    overflow-x: hidden;
   }
 }
