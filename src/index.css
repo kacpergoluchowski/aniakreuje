@@ -15,8 +15,9 @@ code {
 }
 
 .btn {
-  color: white !important;
+  color: black !important;
   text-decoration: none;
+  font-size: 80%;
 }
 
 * {
