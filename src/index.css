@@ -17,7 +17,7 @@ code {
 .btn {
   color: black !important;
   text-decoration: none;
-  font-size: 130%;
+  font-size: 120%;
   font-family: Anonymous Pro;
 }
 
@@ -508,7 +508,7 @@ h1 {
   .reviev p {
     font-size: 175%;
     box-sizing: border-box;
-    margin: 0 0 2vh 0;
+    margin: 0 0 4vh 0;
   }
 
   .offer {
