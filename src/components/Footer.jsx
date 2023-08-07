@@ -3,6 +3,7 @@ import Logo from '../components/Logo'
 import fb from '../images/facebookLogo.png'
 import ig from '../images/instagramLogo.png'
 import tt from '../images/tiktokLogo.png'
+import { Link } from "react-router-dom";
 
 export default function Footer(props) {
     const {page} = props;
@@ -11,8 +12,8 @@ export default function Footer(props) {
                 <div id = 'footer-menu'>
                     <ul>
                         <li className="header"> MENU </li>
-                        <li> Strona główna </li>
-                        <li> Moje portfolio </li>
+                        <Link to = '/' onClick={() => window.scrollTo(0,0)}> <li> Strona główna </li> </Link>
+                        <Link to = '/portfolio' onClick={() => window.scrollTo(0,0)}> <li> Moje portfolio </li> </Link> 
                         <li> Usługi i wycena </li>
                     </ul>
                     <ul>

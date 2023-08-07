@@ -21,6 +21,12 @@ code {
   font-family: Anonymous Pro;
 }
 
+a {
+  display: flex;
+  text-decoration: none;
+  color: black
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -89,6 +95,15 @@ h1 {
     gap: 15px;
     align-items: center;
     box-sizing: border-box;
+    transition: .5s;
+  }
+  
+  .logo:hover {
+    color: gray;
+  }
+
+  .logo:hover img {
+    filter: brightness(80%);
   }
   
   .logo > img {
@@ -379,6 +394,10 @@ h1 {
 
   .portfolio-footer {
     background: var(--bg-color);
+    color: white;
+  }
+
+  .portfolio-footer a {
     color: white;
   }
 
@@ -1007,6 +1026,10 @@ h1 {
 
   .portfolio-footer {
     background: var(--bg-color);
+    color: white;
+  }
+
+  .portfolio-footer a {
     color: white;
   }
 }

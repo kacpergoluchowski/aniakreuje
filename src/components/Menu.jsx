@@ -1,5 +1,6 @@
 import React from "react";
 import dataModeChanger from '../images/dataModeChanger.png'
+import { Link } from "react-router-dom";
 
 export default function Menu() {
     function changeMode() {
@@ -13,7 +14,7 @@ export default function Menu() {
     return (
         <div className="navbar-menu">
             <h2 onClick={() => {window.scrollTo(0, 200)}}> Usługi i wycena </h2>
-            <h2> Portfolio </h2>
+            <Link to = '/portfolio' onClick={() => window.scrollTo(0,0)}> <h2> Portfolio </h2> </Link>
             <img src = {dataModeChanger} onClick={changeMode}/>
         </div>
         
