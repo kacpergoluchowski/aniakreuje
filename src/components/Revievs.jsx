@@ -55,7 +55,6 @@ const RevievsList = data.map(item => {
 export default function Revievs() {
     return (
         <div className="revievs">
-            <h1 data-aos = 'fade-left'> Zobacz komentarze! </h1>
             <div>
                 {RevievsList}
             </div>  

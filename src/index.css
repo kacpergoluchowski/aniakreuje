@@ -17,7 +17,7 @@ code {
 .btn {
   color: black !important;
   text-decoration: none;
-  font-size: 120%;
+  font-size: 80%;
   font-family: Anonymous Pro;
 }
 
@@ -36,6 +36,7 @@ p {
 
 h1 {
   font-family: Anonymous Pro;
+  text-align: left;
 }
 
 #root {
@@ -64,6 +65,22 @@ h1 {
     background-image: url('./images/heroBg.png');
     height: 100vh;
     background-position: center;
+  }
+
+  .portfolio-hero {
+    background-image: url('./images/heroBgPortfolio.png');
+    height: 60vh;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 600%;
+    font-family: Kaushan Script;
+  }
+
+  .portfolio-hero::after {
+    content: 'Moje portfolio';
   }
   
   .logo {
@@ -327,13 +344,67 @@ h1 {
   .link img {
     width: 10%;
   }
+
+  .gallery {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding-bottom: 10vh;
+  }
+
+  .images-container img {
+    object-fit: contain;
+  }
+
+  .changing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 6vh 0;
+  }
+
+  .changing-buttons button {
+    background: var(--bg-color);
+    font-size: 200%;
+    font-family: Anonymous Pro;
+    color: white;
+  }
+
+  .portfolio-footer {
+    background: var(--bg-color);
+    color: white;
+  }
+
 }
 
-@media only screen and (max-width: 1503px) and (min-width: 1100px) {
+@media only screen and (max-width: 1503px) and (min-width: 1261px) {
   .home-hero {
     background-image: url('./images/heroBg.png');
     height: 100vh;
     background-position: center;
+  }
+
+  .portfolio-hero {
+    background-image: url('./images/heroBgPortfolio.png');
+    height: 60vh;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 600%;
+    font-family: Kaushan Script;
+  }
+
+  .portfolio-hero::after {
+    content: 'Moje portfolio';
   }
 
   .logo {
@@ -473,7 +544,6 @@ h1 {
     height: 6vh;
     border-radius: 30px;
     border: none;
-    font-size: 100%;
     font-weight: bold;
     font-family: Kalam;
   }
@@ -556,20 +626,27 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2vh;
     margin-top: -0.5vh;
-  }
-  
-  footer table {
-    width: 60%;
-    font-size: 300%;
-    font-family: Kaushan Script;
-   
-  }
-  
-  footer table td {
-    font-family: Kalam;
     text-align: center;
+  }
+
+  #footer-menu  {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 200%;
+  }
+
+  footer ul {
+    list-style-type: none;
+    line-height: 7vh;
+  }
+
+  .header {
+    font-weight: bold;
+    font-family: Anonymous Pro;
+    font-size: 150%;
+    
   }
   
   .link {
@@ -582,7 +659,43 @@ h1 {
   .link img {
     width: 10%;
   }
-  
+
+  .gallery {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding-bottom: 10vh;
+  }
+
+  .images-container img {
+    object-fit: contain;
+  }
+
+  .changing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 6vh 0;
+  }
+
+  .changing-buttons button {
+    background: var(--bg-color);
+    font-size: 100%;
+    font-family: Anonymous Pro;
+    color: white;
+  }
+
+  .portfolio-footer {
+    background: var(--bg-color);
+    color: white;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -604,6 +717,22 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .portfolio-hero {
+    background-image: url('./images/heroBgPortfolio.png');
+    height: 60vh;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 400%;
+    font-family: Kaushan Script;
+  }
+
+  .portfolio-hero::after {
+    content: 'Moje portfolio';
   }
 
   .logo {
@@ -841,5 +970,357 @@ h1 {
   
   .link img {
     width: 13%;
+  }
+
+  .gallery {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding-bottom: 10vh;
+  }
+
+  .images-container img {
+    object-fit: contain;
+    width: 80%;
+  }
+
+  .changing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 6vh 0;
+  }
+
+  .changing-buttons button {
+    background: var(--bg-color);
+    font-size: 100%;
+    font-family: Anonymous Pro;
+    color: white;
+  }
+
+  .portfolio-footer {
+    background: var(--bg-color);
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1260px) {
+  .home-hero {
+    background-image: url('./images/heroBg.png');
+    height: 100vh;
+    background-position: center;
+  }
+
+  .portfolio-hero {
+    background-image: url('./images/heroBgPortfolio.png');
+    height: 60vh;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 500%;
+    font-family: Kaushan Script;
+  }
+
+  .portfolio-hero::after {
+    content: 'Moje portfolio';
+  }
+  
+  .logo {
+    display: flex;
+    font-size: 155%;
+    gap: 15px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .logo > img {
+    width: 60px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    font-family: Indie Flower;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 15px;
+    width: 100vw;
+    background-color: rgba(255,255,255, 0.6);
+    padding: 0 2vw;
+    z-index: 5;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    font-family: Kaushan Script;
+    align-items: center;
+    gap: 70px;
+    margin-right: 3vw;
+  } 
+  
+  .navbar-menu h2 {
+    cursor: pointer;
+  }
+  
+  .navbar-menu img {
+    width: 15%;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 3vh 4vw 0 4vw;
+    margin-bottom: -0.5vh;
+  }
+  
+  .about-section img {
+    width: 50%;
+    margin-top: 2vh;
+  }
+
+  .about-section .logo img {
+    width: 60px;
+    margin: auto 0;
+  }
+
+  .about-section .logo h2 {
+    font-size: 200%;
+  }
+
+  .about-section .logo {
+    display: flex;
+  }
+
+  .about--my-profile {
+    display: flex;
+  }
+  
+  .about-section span {
+    background: var(--bg-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Kaushan Script;
+    font-size: 140%;
+  }
+
+  .about--my-profile > div {
+    padding: 5vh 0;
+  }
+
+  .about--my-profile > div > div {
+    gap: 40px;
+  }
+
+  .about--my-profile > div > div img {
+    width: 70px;
+  }
+
+  .about--my-profile p {
+    font-size: 150%;
+  }
+
+  .about--my-profile h1 {
+    font-size: 250%;
+  }
+
+  .portfolio-section {
+    margin-top: -0.2vh;
+  }
+
+  .portfolio-section > div {
+    display: flex;
+  }
+
+  .portfolio-section div > img {
+    width: 50%;
+  } 
+
+  .portfolio-section h1 {
+    margin: 0;
+    font-size: 270%;
+  }
+
+  .portfolio-section > div > div {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 5vw;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  .portfolio-section p {
+    width: 100%;
+    font-size: 200%;
+  }
+  
+  button {
+    width: 15vw;
+    height: 6vh;
+    border-radius: 30px;
+    border: none;
+  }
+  
+  .btn {
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .reviev {
+    background: var(--bg-color);
+    width: 40%;
+    height: 280px;
+    border-radius: 30px;
+    padding: 2vh 4vw;
+    box-sizing: border-box;
+    color: var(--white);
+  }
+  
+  .reviev > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Kaushan Script;
+    color: var(--white);
+  }
+
+  .reviev > div img {
+    width: 90px;
+  }
+  
+  .revievs {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    box-sizing: border-box;
+    margin-top: -1vh;
+    align-items: center;
+  }
+
+  .reviev p {
+    font-size: 150%;
+    margin: 2vh 0;
+  }
+  
+  .revievs > h1 {
+    margin: 0;
+    margin-bottom: 5vh;
+    font-size: 300%;
+  }
+  
+  .revievs > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 60px;
+  }
+
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);   
+    margin-top: -0.1vh;
+  }
+  
+  .offer > div {
+    width: 90%;
+    display: flex;
+  }
+
+  .offer > div > div {
+    padding: 5vh 0;
+    font-size: 150%;
+  }
+
+  .offer img {
+    width: 50%;
+  }
+  
+  .offer h1 {
+    margin: 0;
+  }
+
+  footer {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -0.15vh;
+    text-align: center;
+  }
+
+  #footer-menu  {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 200%;
+  }
+
+  footer ul {
+    list-style-type: none;
+    line-height: 6vh;
+  }
+
+  .header {
+    font-weight: bold;
+    font-family: Anonymous Pro;
+    font-size: 140%;
+  }
+  
+  .link img {
+    width: 13%;
+  }
+
+  .gallery {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding-bottom: 10vh;
+  }
+
+  .images-container img {
+    object-fit: contain;
+  }
+
+  .changing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 6vh 0;
+  }
+
+  .changing-buttons button {
+    background: var(--bg-color);
+    font-size: 150%;
+    font-family: Anonymous Pro;
+    color: white;
+  }
+
+  .portfolio-footer {
+    background: var(--bg-color);
+    color: white;
   }
 }

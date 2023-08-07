@@ -1,8 +1,16 @@
 import React from "react";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Gallery from "../components/Gallery";
 
 const Porfolio = () => {
     return (
-        <h1> Portfolio </h1>
+        <>
+            <Hero heroClass = 'portfolio-hero'/>
+            <Navbar/>
+            <Gallery/>
+        </>
+        
     )
 }
 

@@ -4,9 +4,10 @@ import fb from '../images/facebookLogo.png'
 import ig from '../images/instagramLogo.png'
 import tt from '../images/tiktokLogo.png'
 
-export default function Footer() {
+export default function Footer(props) {
+    const {page} = props;
     return (
-        <footer>
+        <footer className={page}>
                 <div id = 'footer-menu'>
                     <ul>
                         <li className="header"> MENU </li>
@@ -24,4 +25,8 @@ export default function Footer() {
             <Logo/>
         </footer>
     )
+}
+
+Footer.defaultProps = {
+    page: null
 }
