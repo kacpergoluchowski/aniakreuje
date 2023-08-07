@@ -41,34 +41,42 @@ function ChangingButtons() {
 
 export default function Gallery() {
     const images = [{
+        id: 1,
         image: imageOne,
         dataType: 'portrait' 
     },
     {
+        id: 2,
         image: imageTwo,
         dataType: 'portrait'
     },
     {
+        id: 3,
         image: imageThree,
         dataType: 'digital-art'
     },
     {
+        id: 4,
         image: imageFour,
         dataType: 'digital-art'
     },
     {
+        id: 5,
         image: imageFive,
         dataType: 'portrait'
     },
     {
+        id: 6,
         image: imageSix,
         dataType: 'portrait'
     },
     {
+        id: 7,
         image: imageSeven,
         dataType: 'digital-art'
     },
     {
+        id: 8,
         image: imageEight,
         dataType: 'digital-art'
     }];
@@ -80,7 +88,7 @@ export default function Gallery() {
             {
                 images.map(item => {
                     return (
-                        <img src = {item.image} className={item.dataType}/>
+                        <img src = {item.image} className={item.dataType} key = {item.id}/>
                     )
                 })
             }
