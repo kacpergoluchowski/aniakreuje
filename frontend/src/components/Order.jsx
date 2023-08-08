@@ -62,7 +62,7 @@ const StartOrder = () => {
                     <h2> Dodatkowe uwagi </h2>
                     <input type = 'text' placeholder="uwagi..." onChange={e => content = e.target.value}/>
                     <span> *cena zostanie ustalona prywatnie </span>
-                    <button onClick={sendMail}> Wyślij </button>
+                    <button> Wyślij </button>
                 </div>
                 <img src = {image}/>
             </div>
