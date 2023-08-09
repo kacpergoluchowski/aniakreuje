@@ -698,6 +698,14 @@ svg {
     transition: all .5s;
     cursor: pointer;
   }
+
+  .change-btn {
+    border-radius: 30px;
+    border: none;
+    width: 20vw;
+    height: 6vh;
+    cursor: pointer;
+  }
   
   .revievs {
     display: flex;
@@ -1110,6 +1118,19 @@ svg {
     cursor: pointer;
   }
 
+  .change-btn {
+    border-radius: 30px;
+    border: none;
+    width: 40vw;
+    font-size: 150%;
+    font-family: Anonymous Pro;
+    color: white;
+    height: 6vh;
+    cursor: pointer;
+    background: var(--bg-color);
+
+  }
+
   .reviev {
     background: var(--bg-color);
     width: 80%;
@@ -1229,34 +1250,13 @@ svg {
 
   .changing-buttons {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-around;
     padding: 6vh 0;
-  }
-
-  .changing-buttons button {
-    background: var(--bg-color);
-    font-size: 100%;
-    font-family: Anonymous Pro;
-    color: white;
+    gap: 10px;
   }
 
   .portfolio-footer {
     background: var(--bg-color);
-    color: white;
-  }
-
-  .changing-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    padding: 6vh 0;
-  }
-
-  .changing-buttons button {
-    background: var(--bg-color);
-    font-size: 200%;
-    font-family: Anonymous Pro;
     color: white;
   }
 
@@ -1513,13 +1513,6 @@ svg {
     font-size: 200%;
   }
   
-  button {
-    width: 15vw;
-    height: 6vh;
-    border-radius: 30px;
-    border: none;
-  }
-  
   .btn {
     font-size: 140%;
     width: 40vw;
@@ -1527,6 +1520,14 @@ svg {
     border: solid white 2px;
     color: white;
     font-family: Anoymous Pro
+  }
+
+  .change-btn {
+    border-radius: 30px;
+    border: none;
+    width: 20vw;
+    height: 6vh;
+    cursor: pointer;
   }
 
   .btn:hover {

@@ -47,8 +47,8 @@ const StartOrder = () => {
     return (
         <div className="order-section">
             <div className="first">
-                <button> <img src = {messanger}/> Złóż zamówienie przez messangera  </button>
-                <button onClick={showOrderMessage}> <img src = {mail}/> Złóż zamówienie przez e-mail </button>
+                <button className="change-btn"> <img src = {messanger}/> Złóż zamówienie przez messangera  </button>
+                <button onClick={showOrderMessage} className="change-btn"> <img src = {mail}/> Złóż zamówienie przez e-mail </button>
             </div>
             <div className="message-config">
                 <div>
