@@ -25,7 +25,7 @@ function checkType(item) {
 }
 
 function sendMail() {
-    fetch('http://127.0.0.1:8282/sendMail', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/sendMail`, {
         method: "POST",
         body: JSON.stringify({email: email, content: content, type: type}),
         headers: {
@@ -34,20 +34,12 @@ function sendMail() {
     })
 }
 
-function validateEmail(email) {
-    var reg = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
-    if(!reg.test(email))
-        return false;
-    else
-        return true;
-}
-
 function checkCorrect(item) {
     if(item.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
         sendMail();
         success();
     }
-    else   
+    else 
         alert("prosze wprowadzić poprawny adres email!");
 }
 
