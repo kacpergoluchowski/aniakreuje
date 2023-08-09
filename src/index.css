@@ -533,6 +533,36 @@ svg {
   .message-config span {
     color: red;
   }
+
+  .success-section {
+    background: var(--bg-color);
+    width: 35%;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+
+  .success-section h1, .success-section p, .success-section h2 {
+    margin: 0;
+  }
+
+  .success-section h1 {
+    font-size: 250%;
+  }
+
+  .success-section p {
+    font-size: 150%;
+  }
+
+  .success-section button {
+    border-radius: 30px;
+    border: solid white 1px;
+    width: 20vw;
+    height: 5vh;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 1503px) and (min-width: 1261px) {
@@ -963,6 +993,35 @@ svg {
   .message-config span {
     color: red;
   }
+  .success-section {
+    background: var(--bg-color);
+    width: 50%;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+
+  .success-section h1, .success-section p, .success-section h2 {
+    margin: 0;
+  }
+
+  .success-section h1 {
+    font-size: 250%;
+  }
+
+  .success-section p {
+    font-size: 150%;
+  }
+
+  .success-section button {
+    border-radius: 30px;
+    border: solid white 1px;
+    width: 30vw;
+    height: 5vh;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1381,6 +1440,36 @@ svg {
     flex-direction: column;
   }
 
+  .success-section {
+    background: var(--bg-color);
+    width: 85%;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+
+  .success-section h1, .success-section p, .success-section h2 {
+    margin: 0;
+  }
+
+  .success-section h1 {
+    font-size: 250%;
+  }
+
+  .success-section p {
+    font-size: 150%;
+  }
+
+  .success-section button {
+    border-radius: 30px;
+    border: solid white 1px;
+    width: 100vw;
+    height: 5vh;
+    font-size: 110%;
+    cursor: pointer;
+  }
   
 }
 
@@ -1828,4 +1917,33 @@ svg {
     flex-direction: column;
   }
 
+  .success-section {
+    background: var(--bg-color);
+    width: 85%;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+
+  .success-section h1, .success-section p, .success-section h2 {
+    margin: 0;
+  }
+
+  .success-section h1 {
+    font-size: 250%;
+  }
+
+  .success-section p {
+    font-size: 150%;
+  }
+
+  .success-section button {
+    border-radius: 30px;
+    border: solid white 1px;
+    width: 60vw;
+    height: 5vh;
+    cursor: pointer;
+  }
 }

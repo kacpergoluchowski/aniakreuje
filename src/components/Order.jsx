@@ -4,6 +4,7 @@ import mail from '../images/mail.png'
 import type1 from '../images/type1.png';
 import type2 from '../images/type2.png';
 import image from '../images/orderImage.png'
+import { Link } from "react-router-dom";
 
 let email, content, type;
 
@@ -33,6 +34,28 @@ function sendMail() {
     })
 }
 
+function validateEmail(email) {
+    var reg = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
+    if(!reg.test(email))
+        return false;
+    else
+        return true;
+}
+
+function checkCorrect(item) {
+    if(item.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+        sendMail();
+        success();
+    }
+    else   
+        alert("prosze wprowadzić poprawny adres email!");
+}
+
+function success() {
+    document.querySelector('.message-config').style.display = 'none'
+    document.querySelector('.success-section').style.display = 'flex';
+}
+
 export default function Order() {
     return (
         <StartOrder/>
@@ -42,12 +65,13 @@ export default function Order() {
 const StartOrder = () => {
     useEffect(() => {
         document.querySelector('.message-config').style.display = 'none';
+        document.querySelector('.success-section').style.display = 'none';
     }, [])
 
     return (
         <div className="order-section">
             <div className="first">
-                <button className="change-btn"> <img src = {messanger}/> Złóż zamówienie przez messangera  </button>
+                <Link to = 'https://www.messenger.com/t/100001647710286'> <button className="change-btn"> <img src = {messanger}/> Złóż zamówienie przez messangera  </button> </Link>
                 <button onClick={showOrderMessage} className="change-btn"> <img src = {mail}/> Złóż zamówienie przez e-mail </button>
             </div>
             <div className="message-config">
@@ -61,10 +85,15 @@ const StartOrder = () => {
                     <input type = 'email' placeholder="twój mail..." onChange={e => email = e.target.value}/>
                     <h2> Dodatkowe uwagi </h2>
                     <input type = 'text' placeholder="uwagi..." onChange={e => content = e.target.value}/>
-                    <span> *cena zostanie ustalona prywatnie </span>
-                    <button> Wyślij </button>
+                    <span> *cena zostanie ustalona indywidualnie </span>
+                    <button className="change-btn" onClick={() => checkCorrect(email)}> Wyślij </button>
                 </div>
                 <img src = {image}/>
+            </div>
+            <div className="success-section">
+                <h1> Dziękuje za zamówienie! </h1>
+                <p> Proszę oczekiwać wiadomości zwrotnej, która zostanie wysłana na podany email. </p>
+                <Link to = '/'> <button onClick={success}> Powrót na stronę główną </button> </Link>
             </div>
         </div>
     )
