@@ -33,8 +33,8 @@ function ChangingButtons() {
 
     return (
         <div className="changing-buttons">
-            <button onClick={showPortraits}> Portrety </button>
-            <button onClick={showDigitals}> Digital Art </button>
+            <button onClick={showPortraits} className="change-btn"> Portrety </button>
+            <button onClick={showDigitals} className="change-btn"> Digital Art </button>
         </div>
     )
 }

@@ -8,17 +8,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.btn {
-  color: black !important;
-  text-decoration: none;
-  font-size: 80%;
-  font-family: Anonymous Pro;
 }
 
 a {
@@ -45,9 +39,78 @@ h1 {
   text-align: left;
 }
 
+img {
+  object-fit: contain;
+}
+
 #root {
   background: var(--bg-color);
   overflow-x: hidden;
+}
+
+.portfolio-hero::after {
+  content: 'Moje portfolio';
+}
+
+.order-hero::after {
+  content: 'Złóż zamówienie';
+}
+
+.logo {
+  display: flex;
+  font-size: 135%;
+  gap: 15px;
+  align-items: center;
+  box-sizing: border-box;
+  transition: .5s;
+}
+
+.logo:hover {
+  color: gray;
+}
+
+.logo:hover img {
+  filter: brightness(80%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 15px;
+  width: 100vw;
+  background-color: rgba(255,255,255, 0.6);
+  padding: 0 2vw;
+  z-index: 5;
+}
+
+.navbar-menu {
+  display: flex;
+  font-family: Kaushan Script;
+  align-items: center;
+  gap: 70px;
+  margin-right: 3vw;
+} 
+
+.navbar-menu h2 {
+  cursor: pointer;
+}
+
+.navbar-menu img {
+  width: 15%;
+}
+
+.portfolio-footer a {
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+svg {
+  margin: -0.1vh 0;
 }
 
 [data-mode='light'] {
@@ -63,10 +126,6 @@ h1 {
 }
 
 @media only screen and (min-width: 1504px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .home-hero {
     background-image: url('./images/heroBg.png');
     height: 100vh;
@@ -97,31 +156,6 @@ h1 {
     font-family: Kaushan Script;
     backdrop-filter: blur(15px);
   }
-
-  .portfolio-hero::after {
-    content: 'Moje portfolio'
-  }
-
-  .order-hero::after {
-    content: 'Złóż zamówienie';
-  }
-  
-  .logo {
-    display: flex;
-    font-size: 155%;
-    gap: 15px;
-    align-items: center;
-    box-sizing: border-box;
-    transition: .5s;
-  }
-  
-  .logo:hover {
-    color: gray;
-  }
-
-  .logo:hover img {
-    filter: brightness(80%);
-  }
   
   .logo > img {
     width: 60px;
@@ -130,33 +164,6 @@ h1 {
   .logo h2 {
     margin: 0;
     font-family: Indie Flower;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 15px;
-    width: 100vw;
-    background-color: rgba(255,255,255, 0.6);
-    padding: 0 2vw;
-    z-index: 5;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    font-family: Kaushan Script;
-    align-items: center;
-    gap: 70px;
-    margin-right: 3vw;
-  } 
-  
-  .navbar-menu h2 {
-    cursor: pointer;
-  }
-  
-  .navbar-menu img {
-    width: 15%;
   }
   
   .about-section {
@@ -238,7 +245,7 @@ h1 {
   .portfolio-section p {
     width: 100%;
     font-size: 130%;
-    line-height: 7vh;
+    line-height: 9vh;
   }
   
   .portfolio-section h1 {
@@ -247,14 +254,23 @@ h1 {
     box-sizing: border-box;
   }
   
-  button {
-    width: 15vw;
-    height: 8vh;
-    font-size: 125%;
-    background-color: var(--white);
+  .btn {
+    font-size: 140%;
+    width: 40vw;
+    background-color: inherit;
+    border: solid white 2px;
+    color: white;
+    font-family: Anonymous Pro;
+    border-radius: 30px;
+    transition: all .5s;
+    cursor: pointer;
+  }
+
+  .change-btn {
     border-radius: 30px;
     border: none;
-    font-weight: bold;
+    width: 20vw;
+    height: 6vh;
     cursor: pointer;
   }
   
@@ -323,15 +339,11 @@ h1 {
   
   .offer p {
      font-size: 250%;
-     line-height: 6vh;
+     line-height: 9vh;
   }
   
   .offer button {
     font-size: 250%;
-  }
-  
-  path {
-    fill: var(--white);
   }
   
   footer {
@@ -411,10 +423,6 @@ h1 {
 
   .portfolio-footer {
     background: var(--bg-color);
-    color: white;
-  }
-
-  .portfolio-footer a {
     color: white;
   }
 
@@ -558,22 +566,6 @@ h1 {
     font-family: Kaushan Script;
     backdrop-filter: blur(15px);
   }
-
-  .order-hero::after {
-    content: 'Złóż zamówienie';
-  }
-
-  .portfolio-hero::after {
-    content: 'Moje portfolio';
-  }
-
-  .logo {
-    display: flex;
-    font-size: 155%;
-    gap: 15px;
-    align-items: center;
-    box-sizing: border-box;
-  }
   
   .logo > img {
     width: 60px;
@@ -581,33 +573,6 @@ h1 {
   
   .logo h2 {
     margin: 0;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 15px;
-    width: 100vw;
-    background-color: rgba(255,255,255, 0.6);
-    padding: 0 2vw;
-    z-index: 5;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    font-family: Kaushan Script;
-    align-items: center;
-    gap: 70px;
-    margin-right: 3vw;
-  } 
-  
-  .navbar-menu h2 {
-    cursor: pointer;
-  }
-  
-  .navbar-menu img {
-    width: 15%;
   }
 
   .about-section {
@@ -653,7 +618,11 @@ h1 {
 
   .about--my-profile > div > div img {
     width: 75px;
+  }
 
+  .about--my-profile > div > div {
+    display: flex;
+    gap: 30px;
   }
 
   .portfolio-section {
@@ -699,15 +668,6 @@ h1 {
     font-size: 120%;
   }
 
-  button {
-    width: 15vw;
-    height: 6vh;
-    border-radius: 30px;
-    border: none;
-    font-weight: bold;
-    font-family: Kalam;
-  }
-
   .reviev {
     background: var(--bg-color);
     width: 600px;
@@ -725,6 +685,18 @@ h1 {
     align-items: center;
     gap: 20px;
     color: var(--white);
+  }
+
+  .btn {
+    font-size: 140%;
+    width: 40vw;
+    background-color: inherit;
+    border: solid white 2px;
+    color: white;
+    font-family: Anoymous Pro;
+    border-radius: 30px;
+    transition: all .5s;
+    cursor: pointer;
   }
   
   .revievs {
@@ -876,10 +848,6 @@ h1 {
     color: white;
   }
 
-  .portfolio-footer a {
-    color: white;
-  }
-
   .order-page {
     background-color: white;
   }
@@ -1012,7 +980,7 @@ h1 {
 
   .portfolio-hero {
     background-image: url('./images/heroBgPortfolio.png');
-    height: 60vh;
+    height: 50vh;
     background-position: center;
     color: white;
     display: flex;
@@ -1035,22 +1003,6 @@ h1 {
     font-family: Kaushan Script;
     backdrop-filter: blur(15px);
   }
-
-  .order-hero::after {
-    content: 'Złóż zamówienie';
-  }
-
-  .portfolio-hero::after {
-    content: 'Moje portfolio';
-  }
-
-  .logo {
-    display: flex;
-    font-size: 120%;
-    gap: 15px;
-    align-items: center;
-    box-sizing: border-box;
-  }
   
   .logo > img {
     width: 40px;
@@ -1058,30 +1010,6 @@ h1 {
   
   .logo h2 {
     margin: 0;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 15px;
-    width: 100vw;
-    height: 5vh;
-    background-color: rgba(255,255,255, 0.6);
-    padding: 0 2vw;
-    z-index: 5;
-  }
-  
-  .navbar-menu {
-    display: none;
-  } 
-  
-  .navbar-menu h2 {
-    cursor: pointer;
-  }
-  
-  .navbar-menu img {
-    width: 15%;
   }
 
   .about-section {
@@ -1109,6 +1037,10 @@ h1 {
 
   .about-section .logo {
     display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
   }
   
   .about-section span {
@@ -1165,14 +1097,17 @@ h1 {
     width: 100%;
   }
 
-  button {
-    width: 40vw;
-    height: 5vh;
-    font-size: 150%;
-    font-weight: bold;
-    background-color: var(--white);
-    border: none;
+  .btn {
+    font-size: 160%;
+    width: 90vw;
+    height: 7vh;
+    background-color: inherit;
+    border: solid white 2px;
+    color: white;
+    font-family: Anoymous Pro;
     border-radius: 30px;
+    transition: all .5s;
+    cursor: pointer;
   }
 
   .reviev {
@@ -1194,7 +1129,7 @@ h1 {
   }
 
   .reviev > div img {
-    width: 90px;
+    width: 80px;
   }
   
   .revievs {
@@ -1208,7 +1143,7 @@ h1 {
 
   .reviev p {
     font-size: 150%;
-    margin: 2vh 0;
+    margin: 1vh 0;
   }
   
   .revievs > h1 {
@@ -1241,14 +1176,6 @@ h1 {
   
   .offer h1 {
     margin: 0;
-  }
-
-  .offer svg {
-    margin-bottom: -0.1vh;
-  }
-  
-  path {
-    fill: var(--white);
   }
   
   footer {
@@ -1319,10 +1246,6 @@ h1 {
     color: white;
   }
 
-  .portfolio-footer a {
-    color: white;
-  }
-
   .changing-buttons {
     display: flex;
     justify-content: center;
@@ -1339,10 +1262,6 @@ h1 {
 
   .portfolio-footer {
     background: var(--bg-color);
-    color: white;
-  }
-
-  .portfolio-footer a {
     color: white;
   }
 
@@ -1468,7 +1387,8 @@ h1 {
 @media only screen and (min-width: 769px) and (max-width: 1260px) {
   .home-hero {
     background-image: url('./images/heroBg.png');
-    height: 100vh;
+    height: 50vh;
+    background-size: 100%;
     background-position: center;
   }
 
@@ -1495,22 +1415,6 @@ h1 {
     font-size: 600%;
     font-family: Kaushan Script;
   }
-
-  .order-hero::after {
-    content: 'Złóż zamówienie';
-  }
-
-  .portfolio-hero::after {
-    content: 'Moje portfolio';
-  }
-  
-  .logo {
-    display: flex;
-    font-size: 155%;
-    gap: 15px;
-    align-items: center;
-    box-sizing: border-box;
-  }
   
   .logo > img {
     width: 60px;
@@ -1519,33 +1423,6 @@ h1 {
   .logo h2 {
     margin: 0;
     font-family: Indie Flower;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 15px;
-    width: 100vw;
-    background-color: rgba(255,255,255, 0.6);
-    padding: 0 2vw;
-    z-index: 5;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    font-family: Kaushan Script;
-    align-items: center;
-    gap: 70px;
-    margin-right: 3vw;
-  } 
-  
-  .navbar-menu h2 {
-    cursor: pointer;
-  }
-  
-  .navbar-menu img {
-    width: 15%;
   }
 
   .about-section {
@@ -1559,8 +1436,7 @@ h1 {
   }
   
   .about-section img {
-    width: 50%;
-    margin-top: 2vh;
+    width: 100%;
   }
 
   .about-section .logo img {
@@ -1575,10 +1451,6 @@ h1 {
   .about-section .logo {
     display: flex;
   }
-
-  .about--my-profile {
-    display: flex;
-  }
   
   .about-section span {
     background: var(--bg-color);
@@ -1589,11 +1461,13 @@ h1 {
   }
 
   .about--my-profile > div {
-    padding: 5vh 0;
+    margin-top: -12vh;
+    padding: 0 10vw;
   }
 
   .about--my-profile > div > div {
     gap: 40px;
+    display: flex;
   }
 
   .about--my-profile > div > div img {
@@ -1604,6 +1478,10 @@ h1 {
     font-size: 150%;
   }
 
+  .about--my-profile > img {
+    margin-top: 2vh;
+  }
+
   .about--my-profile h1 {
     font-size: 250%;
   }
@@ -1612,12 +1490,8 @@ h1 {
     margin-top: -0.2vh;
   }
 
-  .portfolio-section > div {
-    display: flex;
-  }
-
   .portfolio-section div > img {
-    width: 50%;
+    width: 100%;
   } 
 
   .portfolio-section h1 {
@@ -1647,8 +1521,16 @@ h1 {
   }
   
   .btn {
-    font-size: 120%;
-    font-weight: bold;
+    font-size: 140%;
+    width: 40vw;
+    background-color: inherit;
+    border: solid white 2px;
+    color: white;
+    font-family: Anoymous Pro
+  }
+
+  .btn:hover {
+    background-color: white;
   }
 
   .reviev {
@@ -1714,12 +1596,11 @@ h1 {
   }
 
   .offer > div > div {
-    padding: 5vh 0;
     font-size: 150%;
   }
 
   .offer img {
-    width: 50%;
+    width: 55%;
   }
   
   .offer h1 {
@@ -1829,10 +1710,6 @@ h1 {
 
   .portfolio-footer {
     background: var(--bg-color);
-    color: white;
-  }
-
-  .portfolio-footer a {
     color: white;
   }
 
