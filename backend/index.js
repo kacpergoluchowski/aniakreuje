@@ -10,6 +10,10 @@ app.use(bp.json());
 app.use(bp.urlencoded({extended: true}));
 
 
+const multer = require('multer')
+const storage = multer.memoryStorage();
+const upload = multer({ storage: multer.memoryStorage()});
+
 app.listen(port, (req, res) => {
     console.log("OK!")
 })
@@ -19,7 +23,8 @@ app.get('/', (req, res) => {
     res.status(200).end();
 })
 
-app.post('/sendMail', (req,res) => {
+app.post('/sendMail',  upload.single('file'), (req,res) => {
+    console.log(req.body.data[0])
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -32,15 +37,22 @@ app.post('/sendMail', (req,res) => {
         from: 'kgoluchowski112@gmail.com',
         to: 'aniakreuje@gmail.com',
         subject: "Zamówienie",
-        text: `Zamówienie typu ${req.body.type} złożone na mail ${req.body.email}. Uwagi dodatkowe: ${req.body.content}`
+        text: `Zamówienie typu ${req.body.type} złożone na mail ${req.body.email}. Uwagi dodatkowe: ${req.body.content}`,
+        attachments: [{
+            filename: req.file.originalname,
+            content: req.file.buffer
+        }]
     };
     
-    transporter.sendMail(mailOptions, function(err, info) {
-        if(err)
-            console.log(err)
-        else
-            console.log("Email sent: " + info.response);
-    })
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            res.status(500).json({ error: 'Email nie został wysłany.' });
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.status(200).json({ message: 'Email został wysłany!.' });
+        }
+    });
     
     res.status(200).end();
 })

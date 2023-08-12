@@ -111,7 +111,7 @@ img {
 
 svg {
   margin: -0.1vh 0;
-}
+} 
 
 [data-mode='light'] {
   --bg-color: linear-gradient(to right, #FF9A9E, #F6B5A2);
@@ -477,8 +477,8 @@ svg {
     height: 130vh;
     padding: 0 10vw;
     box-sizing: border-box;
-    display: none;
     justify-content: space-around;
+    min-height: 160vh;
   }
 
   .message-config img {
@@ -562,6 +562,14 @@ svg {
     width: 20vw;
     height: 5vh;
     cursor: pointer;
+  }
+
+  input[type='file'] {
+    font-size: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
   }
 }
 
@@ -1022,6 +1030,14 @@ svg {
     height: 5vh;
     cursor: pointer;
   }
+
+  input[type='file'] {
+    font-size: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1469,6 +1485,14 @@ svg {
     height: 5vh;
     font-size: 110%;
     cursor: pointer;
+  }
+
+  input[type='file'] {
+    font-size: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
   }
   
 }
@@ -1945,5 +1969,13 @@ svg {
     width: 60vw;
     height: 5vh;
     cursor: pointer;
+  }
+
+  input[type='file'] {
+    font-size: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
   }
 }
