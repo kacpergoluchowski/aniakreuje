@@ -11,6 +11,7 @@ export default function Menu() {
             document.querySelector("#root").setAttribute('data-mode', 'light');
     }
 
+    
     return (
         <div className="navbar-menu">
             <Link to = '/order-page' onClick={() => window.scrollTo(0,0)}> <h2> Usługi i wycena </h2> </Link>

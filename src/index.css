@@ -126,6 +126,10 @@ svg {
 }
 
 @media only screen and (min-width: 1504px) {
+  .navbar > img {
+    display: none;
+  }
+
   .home-hero {
     background-image: url('./images/heroBg.png');
     height: 100vh;
@@ -574,6 +578,9 @@ svg {
 }
 
 @media only screen and (max-width: 1503px) and (min-width: 1261px) {
+  .navbar > img {
+    display: none;
+  }
   .home-hero {
     background-image: url('./images/heroBg.png');
     height: 100vh;
@@ -1041,6 +1048,36 @@ svg {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar > img {
+    width: 8%;
+    margin-right: 7vw;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+  }
+
+  .mobile-menu a {
+    color: white;
+  }
+
+  .mobile-menu > img {
+    position: absolute;
+    top: 3vh;
+    right: 5vw;
+    width: 15%;
+  }
+
   #root {
     width: 100%;
   }
@@ -1499,10 +1536,14 @@ svg {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1260px) {
+  .navbar > img {
+    display: none;
+  }
+
   .home-hero {
     background-image: url('./images/heroBg.png');
     height: 48vh;
-    background-size: 100%;
+    background-size: 110%;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -1597,6 +1638,7 @@ svg {
 
   .about--my-profile p {
     font-size: 2vw;
+    line-height: 4vh;
   }
 
   .about--my-profile > img {
@@ -1621,7 +1663,7 @@ svg {
 
   .portfolio-section h1 {
     margin: 0;
-    font-size: 3vh;
+    font-size: 200%;
   }
 
   .portfolio-section > div > div {
@@ -1635,7 +1677,8 @@ svg {
   
   .portfolio-section p {
     width: 100%;
-    font-size: 2vw;
+    font-size: 2.5vw;
+    line-height: 4vh;
   }
   
   .btn {
