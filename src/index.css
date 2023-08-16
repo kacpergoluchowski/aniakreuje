@@ -1501,9 +1501,10 @@ svg {
 @media only screen and (min-width: 769px) and (max-width: 1260px) {
   .home-hero {
     background-image: url('./images/heroBg.png');
-    height: 50vh;
+    height: 48vh;
     background-size: 100%;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   .portfolio-hero {
@@ -1516,6 +1517,7 @@ svg {
     justify-content: center;
     font-size: 500%;
     font-family: Kaushan Script;
+    background-repeat: no-repeat;
   }
 
   .order-hero {
@@ -1528,6 +1530,7 @@ svg {
     justify-content: center;
     font-size: 600%;
     font-family: Kaushan Script;
+    background-repeat: no-repeat;
   }
   
   .logo > img {
@@ -1545,12 +1548,12 @@ svg {
     justify-content: center;
     flex-direction: column;
     background-color: var(--white);
-    padding: 5vh 2vw 0 2vw;
+    padding: 2vh 2vw 0 2vw;
     margin-bottom: -0.5vh;
   }
   
   .about-section img {
-    width: 55%;
+    width: 50%;
   }
 
   .about-section .logo img {
@@ -1576,6 +1579,7 @@ svg {
 
   .about--my-profile {
     display: flex;
+    margin-top: 2vh;
   }
 
   .about--my-profile > div {
@@ -1588,11 +1592,11 @@ svg {
   }
 
   .about--my-profile > div > div img {
-    width: 70px;
+    width: 8vw;
   }
 
   .about--my-profile p {
-    font-size: 150%;
+    font-size: 2vw;
   }
 
   .about--my-profile > img {
@@ -1600,7 +1604,7 @@ svg {
   }
 
   .about--my-profile h1 {
-    font-size: 250%;
+    font-size: 3vw;
   }
 
   .portfolio-section {
@@ -1612,35 +1616,37 @@ svg {
   }
 
   .portfolio-section div > img {
-    width: 50%;
+    width: 48%;
   } 
 
   .portfolio-section h1 {
     margin: 0;
-    font-size: 270%;
+    font-size: 3vh;
   }
 
   .portfolio-section > div > div {
     text-align: justify;
     display: flex;
     flex-direction: column;
-    padding: 10vh 5vw;
+    padding: 5vh 5vw;
     box-sizing: border-box;
     color: white;
   }
   
   .portfolio-section p {
     width: 100%;
-    font-size: 200%;
+    font-size: 2vw;
   }
   
   .btn {
     font-size: 140%;
     width: 40vw;
+    height: 50px;
     background-color: inherit;
     border: solid white 2px;
     color: white;
-    font-family: Anoymous Pro
+    font-family: Anoymous Pro;
+    border-radius: 30px;
   }
 
   .change-btn {
@@ -1664,6 +1670,10 @@ svg {
     box-sizing: border-box;
     color: var(--white);
   }
+
+  .reviev > img {
+    width: 70px;
+  }
   
   .reviev > div {
     display: flex;
@@ -1674,7 +1684,7 @@ svg {
   }
 
   .reviev > div img {
-    width: 90px;
+    width: 70px;
   }
   
   .revievs {
@@ -1718,7 +1728,7 @@ svg {
   }
 
   .offer > div > div {
-    font-size: 150%;
+    font-size: 2.5vw;
   }
 
   .offer img {
@@ -1727,6 +1737,7 @@ svg {
   
   .offer h1 {
     margin: 0;
+    font-size: 5vw;
   }
 
   footer {
@@ -1735,6 +1746,7 @@ svg {
     flex-direction: column;
     align-items: center;
     margin-top: -0.15vh;
+    padding-bottom: 2vh;
     text-align: center;
   }
 
