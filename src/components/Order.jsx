@@ -67,11 +67,6 @@ export default function Order() {
         setShowSuccess(true);
     };
 
-    useEffect(() => {
-        setShowConfig(false);
-        setShowSuccess(false);
-    }, []);
-
     return (
         <div className="order-section">
             {showChoice && (

@@ -1652,7 +1652,7 @@ svg {
   .change-btn {
     border-radius: 30px;
     border: none;
-    width: 20vw;
+    width: 30vw;
     height: 6vh;
     cursor: pointer;
   }
@@ -1698,12 +1698,11 @@ svg {
 
   .reviev p {
     font-size: 150%;
-    margin: 2vh 0;
+    margin: 0 0 1vh 0;
   }
   
   .revievs > h1 {
     margin: 0;
-    margin-bottom: 5vh;
     font-size: 300%;
   }
   
@@ -1788,6 +1787,7 @@ svg {
 
   .images-container img {
     object-fit: contain;
+    width: 40%;
   }
 
   .changing-buttons {

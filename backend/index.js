@@ -24,7 +24,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/sendMail',  upload.single('file'), (req,res) => {
-    console.log(req.body.data[0])
+    const parsedData = JSON.parse(req.body.data);
+    const {email, content, type} = parsedData;
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -37,7 +38,7 @@ app.post('/sendMail',  upload.single('file'), (req,res) => {
         from: 'kgoluchowski112@gmail.com',
         to: 'aniakreuje@gmail.com',
         subject: "Zamówienie",
-        text: `Zamówienie typu ${req.body.type} złożone na mail ${req.body.email}. Uwagi dodatkowe: ${req.body.content}`,
+        text: `Zamówienie typu ${type} złożone na mail ${email}. Uwagi dodatkowe: ${content}`,
         attachments: [{
             filename: req.file.originalname,
             content: req.file.buffer
