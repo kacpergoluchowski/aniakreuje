@@ -54,7 +54,7 @@ export default function Order() {
         }
         formData.append('data', JSON.stringify(data))
 
-        await fetch(`${process.env.REACT_APP_BACKEND_URL}/sendMail`, {
+        await fetch(`http://127.0.0.1:8282/sendMail`, {
             method: "POST",
             body: formData,
         });
