@@ -1490,6 +1490,7 @@ svg {
   .message-config > div {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20vh;
   }
 
   .message-config span {
