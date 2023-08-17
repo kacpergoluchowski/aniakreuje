@@ -18,9 +18,9 @@ export default function Footer(props) {
                     </ul>
                     <ul>
                         <li className="header"> SOCIAL MEDIA </li>
-                        <li className="link"> <img src = {fb}/> Facebook </li>
-                        <li className="link"> <img src = {ig}/> Instagram </li>
-                        <li className="link"> <img src = {tt}/> TikTok </li>
+                        <Link to = 'https://www.facebook.com/aneczkagoluchowska'> <li className="link"> <img src = {fb}/> Facebook </li> </Link>
+                        <Link to = 'https://www.instagram.com/aniakreuje/'> <li className="link"> <img src = {ig}/> Instagram </li> </Link>
+                        <Link to = 'https://www.instagram.com/aniakreuje/'> <li className="link"> <img src = {tt}/> TikTok </li> </Link>
                     </ul>
                 </div>
             <Logo/>
